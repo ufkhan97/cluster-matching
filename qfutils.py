@@ -370,7 +370,7 @@ def create_voter_overlap_heatmap(df):
 
     # Select the top 20 projects
     unique_projects = []
-    for idx, overlap in overlap_matrix_flat.iteritems():
+    for idx, overlap in overlap_matrix_flat.items():
         if idx[0] not in unique_projects:
             unique_projects.append(idx[0])
         if idx[1] not in unique_projects:
