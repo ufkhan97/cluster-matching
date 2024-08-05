@@ -325,6 +325,8 @@ def get_qf_matching(algo, donation_df, matching_cap_percent, matching_amount, cl
         funding = donation_profile_clustermatch(donation_df)
     elif algo == 'COCM':
         funding = COCM(donation_df, cluster_df)
+    elif algo == 'pairwise':
+        funding = pairwise(donation_df)
     else:
         funding = standard_qf(donation_df)
     total_money = sum(funding.values())
